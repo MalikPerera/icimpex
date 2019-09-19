@@ -1,0 +1,152 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: PopLight;
+    src: url("../fonts/Poppins-Light.ttf");
+}
+@font-face {
+    font-family: PopRegular;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+html {
+    /*overflow: hidden;*/
+}
+
+body{
+    font-family: PopLight;
+}
+
+.main.page{
+    color: white;
+    background: radial-gradient(rgba(43,55,96,1), rgba(11,16,35,1));
+}
+
+nav{
+    min-height: 10vh;
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: 3% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3%;
+    /*margin: auto;*/
+    /*display: flex;*/
+    /*width: 93.5%;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+}
+
+.links{
+    display: flex !important;
+    align-self: center;
+    justify-self: right;
+    grid-column: 6/9;
+    /*float: right;*/
+}
+
+.links h5{
+    padding-left: 20px;
+}
+
+.logo{
+    display: flex !important;
+    grid-column: 2/5;
+}
+
+.logo h2{
+    font-size: 25px;
+    align-self: center;
+    padding-left: 28px;
+}
+
+.logo img{
+    height: 40px;
+    border-radius: 29px;
+    align-self: center;
+}
+
+.one,.two{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 3% 1fr 1fr 1fr 3%;
+}
+
+.main.image {
+    overflow: hidden;
+    /*height: 500px;*/
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    grid-column: 3/5;
+}
+
+.main.image img{
+    height: 240px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+
+.main-right{
+    transform: translate(0%, 10%);
+}
+
+.main-left{
+    transform: translate(0%, -10%);
+}
+
+.main.image:hover .main-right{
+    transform: translate(0%, 0%);
+}
+
+.main.image:hover .main-left{
+    transform: translate(0%, 0%);
+}
+
+.details{
+    grid-column:2/3 ;
+    align-self: center;
+}
+
+.details p{
+    padding: 30px 0px 10px 0px;
+}
+
+.pages{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pages > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.pages svg{
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(2);
+}
+
+.pages svg:hover{
+    animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages svg.active{
+    opacity: 1;
+}
+
+@keyframes dot {
+    0%{
+        transform: scale(2);
+    }
+
+    100%{
+        transform: scale(2.8);
+    }
+}
